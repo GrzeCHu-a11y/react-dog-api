@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./DogSearcher.module.scss";
+import axios from "axios";
 
 const DogSearcher = () => {
   const [dogBreed, setDogBreed] = useState("");
@@ -17,9 +18,9 @@ const DogSearcher = () => {
     setError("");
 
     try {
-      const response = await fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`);
-      if (response.ok) {
-        const data = await response.json();
+      const response = await axios.get(`https://dog.ceo/api/breed/${dogBreed}/images/random`);
+      if (response.status === 200) {
+        const data = response.data;
         setDogImage(data.message);
       } else {
         setError("Dog not found");

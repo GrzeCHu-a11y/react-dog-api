@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import style from "./ListOfDogs.module.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const ListOfDogs = () => {
   const [dogs, setDogs] = useState([]);
@@ -12,8 +13,8 @@ const ListOfDogs = () => {
 
   const fetchDogs = async () => {
     try {
-      const response = await fetch("https://dog.ceo/api/breeds/list/all");
-      const data = await response.json();
+      const response = await axios.get("https://dog.ceo/api/breeds/list/all");
+      const data = response.data;
       const dogNames = Object.keys(data.message).slice(0, limit);
       setDogs(dogNames);
       setLimit(limit + 6);

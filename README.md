@@ -29,3 +29,4 @@ punkty dodatkowe
 
 punkty dodatkowe:
 użycie biblioteki do pobierania danyc w moim wypadku jest to axios
+>>>>>>> master
