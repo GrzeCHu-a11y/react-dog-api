@@ -1,0 +1,51 @@
+.listOfDogsContainer {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    padding-bottom: 85px;
+}
+
+.itemsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: auto;
+    align-content: start
+}
+
+.item {
+    background-color: rgb(222, 206, 206);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+@media (width < 600px) {
+    .itemsWrapper {
+        flex-direction: column;
+    }
+    .item {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+
+.item:hover {
+    cursor: pointer;
+    background-color: rgb(241, 229, 229);
+}
+
+.button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.buttonWrapper {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+}

@@ -1,7 +1,9 @@
+import style from "../styles/searchDog.module.scss";
+import Header from "../components/molecules/Header/Header";
 const About = () => {
   return (
-    <div>
-      <h1>Search Dog</h1>
+    <div className={style.searchDog}>
+      <Header headerName="Search Dog" />
     </div>
   );
 };
