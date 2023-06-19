@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import style from "../styles/fullDogImage.module.scss";
+import axios from "axios";
 
 const FullDogImage = () => {
   const [dogImg, setDogImg] = useState("");
@@ -13,8 +14,8 @@ const FullDogImage = () => {
 
   const fetchDog = async () => {
     try {
-      const response = await fetch(`https://dog.ceo/api/breed/${dog}/images/random`);
-      const data = await response.json();
+      const response = await axios.get(`https://dog.ceo/api/breed/${dog}/images/random`);
+      const data = response.data;
       const dogImgUrl = data.message;
       setDogImg(dogImgUrl);
       setIsLoading(false);
