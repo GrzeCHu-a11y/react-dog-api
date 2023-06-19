@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 30px;
+  
+    .inputContainer {
+      margin-bottom: 20px;
+    }
+  
+    .textInput {
+      border: 1px solid black;
+      padding: 8px;
+      font-size: 16px;
+    }
+  
+    .button {
+      padding: 10px ;
+      margin-left: 15px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    .imageContainer {
+      margin-top: 20px;
+      text-align: center;
+  
+      .image {
+        max-width: 300px;
+        max-height: 300px;
+      }
+    }
+  }
+
+  .backLink {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+.backLink:hover {
+    text-decoration: underline;
+  }  
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #f3f3f3;
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
