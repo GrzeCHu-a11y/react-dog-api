@@ -3,8 +3,12 @@ import style from "./Navbar.module.scss";
 const Navbar = () => {
   return (
     <nav className={style.nav}>
-      <NavLink to="/">Dog List</NavLink>
-      <NavLink to="/searchDog">Search Dog</NavLink>
+      <NavLink to="/" className={style.navLink}>
+        Dog List
+      </NavLink>
+      <NavLink to="/searchDog" className={style.navLink}>
+        Search Dog
+      </NavLink>
     </nav>
   );
 };

@@ -15,10 +15,15 @@
 }
 
 .item {
-    background-color: rgb(222, 206, 206);
+    background-color: rgb(224, 115, 135);
     width: 30%;
     margin: 10px;
     text-align: center;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: rgb(222, 151, 164);
 }
 
 @media (width < 600px) {
@@ -31,21 +36,18 @@
     }
 }
 
-
-.item:hover {
-    cursor: pointer;
-    background-color: rgb(241, 229, 229);
-}
-
-.button {
-    padding: 10px;
-    cursor: pointer;
-}
-
 .buttonWrapper {
     margin: 0 auto;
     width: 90%;
     height: auto;
     padding: 20px;
     text-align: center;
+
+    .button {
+        border: none;
+        padding: 10px;
+        background-color: rgb(95, 167, 223);
+        cursor: pointer;
+    }
 }
+

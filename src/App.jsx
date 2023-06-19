@@ -4,7 +4,6 @@ import Navbar from "./components/organisms/Navbar/Navbar.jsx";
 import DogList from "./pages/DogList.jsx";
 import SearchDog from "./pages/SearchDog.jsx";
 import FullDogImage from "./pages/FullDogImage";
-import ImageContext from "./contexts/ImageContex";
 
 function App() {
   const router = createBrowserRouter(
@@ -12,16 +11,14 @@ function App() {
       <Route path="/" element={<Root />}>
         <Route index element={<DogList />} />
         <Route path="/searchDog" element={<SearchDog />} />
-        <Route path="/fullDogImage" element={<FullDogImage />} />
+        <Route path="/:dog" element={<FullDogImage />} />
       </Route>
     )
   );
 
   return (
     <div className="App">
-      <ImageContext>
-        <RouterProvider router={router} />
-      </ImageContext>
+      <RouterProvider router={router} />
     </div>
   );
 }
